@@ -26,12 +26,12 @@ func main() {
 		}(i)
 	}
 
-	// c.L.Lock()
+	c.L.Lock()
 	for ready != 10 {
 		c.Wait()
 		log.Println("裁判员被唤醒一次")
 	}
-	// c.L.Unlock()
+	c.L.Unlock()
 
 	// 所有的运动员是否就绪
 	log.Println("所有运动员都准备就绪。比赛开始，3，2，1, ......")
