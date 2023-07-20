@@ -1,0 +1,13 @@
+go 1.20
+
+use (
+	client-go
+	concurrency
+	copier
+	go-elasticsearch
+	go-redis
+	gomonkey
+	kakfa-sarama
+	kitex
+	mapstructure
+)
