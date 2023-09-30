@@ -1,5 +1,5 @@
 module gomonkey
 
-go 1.18
+go 1.21
 
-require github.com/agiledragon/gomonkey/v2 v2.9.0
+require github.com/agiledragon/gomonkey/v2 v2.10.1
