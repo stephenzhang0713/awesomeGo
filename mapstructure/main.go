@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/mitchellh/mapstructure"
 	"log"
+
+	"github.com/mitchellh/mapstructure"
 )
 
 type Person struct {
