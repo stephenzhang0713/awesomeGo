@@ -4,12 +4,11 @@ toolchain go1.21.1
 
 use (
 	client-go
-	concurrency
 	copier
-	go-elasticsearch
 	go-redis
 	gomonkey
 	kakfa-sarama
 	kitex
+	train-club
 	mapstructure
 )
