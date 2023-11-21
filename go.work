@@ -5,6 +5,7 @@ toolchain go1.21.1
 use (
 	client-go
 	copier
+	concurrency
 	go-redis
 	gomonkey
 	kakfa-sarama
