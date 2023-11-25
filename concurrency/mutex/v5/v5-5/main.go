@@ -41,7 +41,7 @@ func (m *TokenRecursiveMutex) Unlock(token int64) {
 	m.Mutex.Unlock()
 }
 
-func foo(l TokenRecursiveMutex) {
+func foo(l *TokenRecursiveMutex) {
 	fmt.Println("in foo")
 	// 调用了l的Lock方法，这会锁定传入的互斥锁。
 	// 如果该锁已经被其他goroutine锁定，这个调用将会阻塞，直到锁变得可用。
@@ -52,7 +52,7 @@ func foo(l TokenRecursiveMutex) {
 	bar(l) // 调用bar函数，并将互斥锁l作为参数传递给它
 }
 
-func bar(l TokenRecursiveMutex) {
+func bar(l *TokenRecursiveMutex) {
 	// bar函数尝试锁定同一个互斥锁l。
 	// 但由于这个锁已经在foo函数中被锁定，这个调用会导致死锁，
 	// 因为foo函数正在等待bar函数完成，而bar函数又在尝试获得已经被foo函数持有的锁。
@@ -65,5 +65,5 @@ func bar(l TokenRecursiveMutex) {
 func main() {
 	// 创建了一个sync.Mutex类型的变量l，并取得它的地址来创建一个互斥锁实例
 	l := TokenRecursiveMutex{}
-	foo(l)
+	foo(&l)
 }
