@@ -32,8 +32,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = decoder.Decode(m)
-	if err == nil {
+	if err = decoder.Decode(m); err == nil {
 		fmt.Println("person:", p)
 		fmt.Printf("keys:%#v, unused:%#v\n", metadata.Keys, metadata.Unused)
 	} else {

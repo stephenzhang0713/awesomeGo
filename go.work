@@ -7,11 +7,11 @@ use (
 	copier
 	concurrency
 	go-redis
-	gomonkey
-	gopsutil
 	bytedance_gopkg
 	kakfa-sarama
 	kitex
 	train-club
 	mapstructure
+	viper
+	gopsutil
 )
