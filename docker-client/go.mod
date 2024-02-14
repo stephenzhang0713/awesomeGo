@@ -2,7 +2,7 @@ module docker-client
 
 go 1.21
 
-require github.com/docker/docker v25.0.2+incompatible
+require github.com/docker/docker v25.0.3+incompatible
 
 require (
 	github.com/Microsoft/go-winio v0.4.14 // indirect

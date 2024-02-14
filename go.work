@@ -1,18 +1,20 @@
-go 1.21
-
-toolchain go1.21.1
+go 1.21.6
 
 use (
-	client-go
-	copier
-	concurrency
-	go-redis
 	bytedance_gopkg
+	client-go
+	concurrency
+	copier
+	docker-client
+	go-redis
+	gopsutil
 	kakfa-sarama
 	kitex
-	train-club
 	mapstructure
+	train-club
+	guestbook
 	viper
-	gopsutil
-	docker-client
+	kubebuider-tutorial
+	Ginkgo
+	go_programming_pattern
 )
