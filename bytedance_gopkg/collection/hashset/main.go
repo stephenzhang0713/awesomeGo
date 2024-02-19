@@ -17,18 +17,22 @@ Hashset 不能保证并发安全。如果确实需要并发安全集，请使用
 */
 func main() {
 	l := hashset.NewInt()
-	for _, v := range []int{10, 12, 15} {
+	for _, v := range []int{10, 12, 15, 15} {
 		if l.Add(v) {
 			fmt.Println("hashset add", v)
 		}
-	}
-	if l.Contains(10) {
-		fmt.Println("hashset contains 10")
 	}
 	l.Range(func(value int) bool {
 		fmt.Println("hashset range found ", value)
 		return true
 	})
-	l.Remove(15)
-	fmt.Printf("hashset contains %d\n", l.Len())
+	//if l.Contains(10) {
+	//	fmt.Println("hashset contains 10")
+	//}
+	//l.Range(func(value int) bool {
+	//	fmt.Println("hashset range found ", value)
+	//	return true
+	//})
+	//l.Remove(15)
+	//fmt.Printf("hashset contains %d\n", l.Len())
 }

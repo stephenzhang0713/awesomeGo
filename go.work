@@ -17,4 +17,6 @@ use (
 	kubebuider-tutorial
 	Ginkgo
 	go_programming_pattern
+	leetcode
+	100-mistakes
 )
